@@ -29,6 +29,8 @@ Example output:
 # TODO: Define your Enemy class here
 
 
+# Uncomment the code below after defining your Hero and Enemy classes
+"""
 # Test your code
 if __name__ == "__main__":
     hero = Hero("Olya")
@@ -56,3 +58,4 @@ if __name__ == "__main__":
         print(f"🎉 {hero.name} wins!")
     else:
         print(f"💀 {enemy.name} wins!")
+"""
