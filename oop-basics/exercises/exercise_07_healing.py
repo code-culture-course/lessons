@@ -19,7 +19,8 @@ Example usage:
 # TODO: Define your Hero class here
 
 
-# Test your code
+# Uncomment the code below after defining your Hero class
+"""
 if __name__ == "__main__":
     hero = Hero("Olya")
     
@@ -40,3 +41,4 @@ if __name__ == "__main__":
     
     # Heal to full
     hero.heal(10)
+"""
