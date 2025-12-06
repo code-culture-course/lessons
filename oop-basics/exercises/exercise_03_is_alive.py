@@ -16,7 +16,8 @@ Example usage:
 # TODO: Define your Enemy class here
 
 
-# Test your code
+# Uncomment the code below after defining your Enemy class
+"""
 if __name__ == "__main__":
     slime = Enemy("Slime")
     
@@ -31,3 +32,4 @@ if __name__ == "__main__":
     
     slime.take_damage(1)
     print(f"Is alive: {slime.is_alive()}")
+"""
