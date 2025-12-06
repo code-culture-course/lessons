@@ -18,7 +18,8 @@ Example usage:
 # TODO: Define your Hero class here
 
 
-# Test your code
+# Uncomment the code below after defining your Hero class
+"""
 if __name__ == "__main__":
     hero = Hero("Olya")
     hero.greet()
@@ -29,3 +30,4 @@ if __name__ == "__main__":
     # Test with different hero
     hero2 = Hero("Ivan")
     hero2.greet()
+"""
