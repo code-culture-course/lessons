@@ -16,12 +16,13 @@ Example usage:
 
 
 # Test your code
-if __name__ == "__main__":
-    slime = Enemy("Slime")
-    print(f"Starting HP: {slime.hp}")
-    
-    slime.take_damage(2)
-    slime.take_damage(1)
-    slime.take_damage(2)
-    
-    print(f"Final HP: {slime.hp}")
+# Uncomment the test code below after defining your Enemy class with the take_damage method
+# if __name__ == "__main__":
+#     slime = Enemy("Slime")
+#     print(f"Starting HP: {slime.hp}")
+#     
+#     slime.take_damage(2)
+#     slime.take_damage(1)
+#     slime.take_damage(2)
+#     
+#     print(f"Final HP: {slime.hp}")
