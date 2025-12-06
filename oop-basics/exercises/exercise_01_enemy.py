@@ -16,7 +16,7 @@ Example usage:
 # TODO: Define your Enemy class here
 
 
-# Uncomment the code below after defining your Enemy class
+# To test your Enemy class, remove the triple quotes (""") above and below this code block
 """
 if __name__ == "__main__":
     slime = Enemy("Slime")
