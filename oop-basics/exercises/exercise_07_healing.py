@@ -19,24 +19,24 @@ Example usage:
 # TODO: Define your Hero class here
 
 
-# Test your code
-if __name__ == "__main__":
-    hero = Hero("Olya")
-    
-    print(f"Starting HP: {hero.hp}/{hero.max_hp}")
-    
-    # Take damage
-    hero.take_damage(5)
-    print(f"After damage: {hero.hp}/{hero.max_hp}")
-    
-    # Heal partially
-    hero.heal(3)
-    
-    # Try to overheal
-    hero.heal(10)
-    
-    # Take more damage
-    hero.take_damage(7)
-    
-    # Heal to full
-    hero.heal(10)
+# Uncomment the code below after defining your Hero class
+# if __name__ == "__main__":
+#     hero = Hero("Olya")
+#     
+#     print(f"Starting HP: {hero.hp}/{hero.max_hp}")
+#     
+#     # Take damage
+#     hero.take_damage(5)
+#     print(f"After damage: {hero.hp}/{hero.max_hp}")
+#     
+#     # Heal partially
+#     hero.heal(3)
+#     
+#     # Try to overheal
+#     hero.heal(10)
+#     
+#     # Take more damage
+#     hero.take_damage(7)
+#     
+#     # Heal to full
+#     hero.heal(10)
