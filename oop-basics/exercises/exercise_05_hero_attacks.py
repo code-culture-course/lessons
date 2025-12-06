@@ -23,6 +23,8 @@ Example usage:
 
 
 # Test your code
+# Uncomment the code below after defining your Hero and Enemy classes
+"""
 if __name__ == "__main__":
     hero = Hero("Olya")
     slime = Enemy("Slime")
@@ -36,3 +38,4 @@ if __name__ == "__main__":
     
     hero.attack(slime)
     print(f"Enemy HP after attack: {slime.hp}")
+"""
