@@ -19,7 +19,7 @@ Example usage:
 
 
 # Uncomment the code below after defining your Hero class
-# (Remove the triple quotes """ above and below the test code)
+# (Remove the triple quotes """ below and at the end of the test code)
 """
 if __name__ == "__main__":
     hero = Hero("Olya")
