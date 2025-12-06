@@ -32,6 +32,8 @@ Example usage:
 
 
 # Test your code
+# Uncomment the code below after defining your Mage class
+"""
 if __name__ == "__main__":
     from exercise_03_is_alive import Enemy  # You can import Enemy if you want
     
@@ -60,3 +62,4 @@ if __name__ == "__main__":
     print("--- Spell After Restore ---")
     mage.cast_spell(goblin, 5)
     print(f"Enemy HP: {goblin.hp}")
+"""
