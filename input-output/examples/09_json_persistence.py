@@ -80,5 +80,5 @@ print()
 save_game_state(game)
 
 print()
-print("Run this program multiple times to see persistence in action!")
-print(f"Your progress is saved in {SAVE_FILE}")
+print("Запустите эту программу несколько раз, чтобы увидеть, как работает сохранение данных!")
+print(f"Ваш прогресс сохраняется в файле {SAVE_FILE}")

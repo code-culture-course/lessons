@@ -13,13 +13,12 @@ print()
 
 # Сначала, проверить существует ли файл, попытавшись его прочитать
 try:
-    file = open("game_log.txt", "r")
+    with open("game_log.txt", "r") as file:
+        
+        # Прочитать весь файл как одну строку
+        content = file.read()
     
-    # Прочитать весь файл как одну строку
-    content = file.read()
-    
-    # Закрыть файл
-    file.close()
+    # Файл автоматически закрывается по выходу из блока with
     
     print("Содержимое файла:")
     print("-" * 40)
@@ -37,12 +36,12 @@ print("\nТеперь читаем построчно:")
 print("-" * 40)
 
 try:
-    file = open("game_log.txt", "r")
+    with open("game_log.txt", "r") as file:
+        
+        # Прочитать все строки в список
+        lines = file.readlines()
     
-    # Прочитать все строки в список
-    lines = file.readlines()
-    
-    file.close()
+    # Файл автоматически закрывается по выходу из блока with
     
     # Обработать каждую строку
     for i, line in enumerate(lines, 1):
