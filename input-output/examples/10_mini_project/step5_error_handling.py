@@ -25,9 +25,8 @@ def load_tasks():
     """
     global tasks
     try:
-        file = open(TASKS_FILE, "r")
-        tasks = json.load(file)
-        file.close()
+        with open(TASKS_FILE, "r") as file:
+            tasks = json.load(file)
         
         # Проверить что tasks это список
         if not isinstance(tasks, list):
@@ -48,14 +47,12 @@ def load_tasks():
         print("Старый файл будет сохранён как tasks.json.bak")
         # Сделать резервную копию повреждённого файла
         try:
-            file = open(TASKS_FILE, "r")
-            content = file.read()
-            file.close()
+            with open(TASKS_FILE, "r") as file:
+                content = file.read()
             
-            backup = open(TASKS_FILE + ".bak", "w")
-            backup.write(content)
-            backup.close()
-        except:
+            with open(TASKS_FILE + ".bak", "w") as backup:
+                backup.write(content)
+        except Exception:
             pass  # Если резервное копирование не удалось, просто продолжить
         
         tasks = []
@@ -65,9 +62,8 @@ def load_tasks():
 def save_tasks():
     """Сохранить все задачи в JSON файл с обработкой ошибок."""
     try:
-        file = open(TASKS_FILE, "w")
-        json.dump(tasks, file, indent=2, ensure_ascii=False)
-        file.close()
+        with open(TASKS_FILE, "w") as file:
+            json.dump(tasks, file, indent=2, ensure_ascii=False)
         return True
     except Exception as e:
         print(f"Ошибка сохранения задач: {e}")

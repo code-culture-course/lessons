@@ -19,10 +19,9 @@ def load_tasks():
     """Загрузить задачи из файла если он существует."""
     global tasks
     try:
-        file = open(TASKS_FILE, "r")
-        # Каждая строка - одна задача
-        tasks = [line.strip() for line in file.readlines()]
-        file.close()
+        with open(TASKS_FILE, "r") as file:
+            # Каждая строка - одна задача
+            tasks = [line.strip() for line in file.readlines()]
         print(f"Загружено {len(tasks)} задач(и) из файла.")
     except FileNotFoundError:
         print("Сохранённых задач не найдено. Начинаем с чистого листа.")
@@ -30,10 +29,9 @@ def load_tasks():
 
 def save_tasks():
     """Сохранить все задачи в файл."""
-    file = open(TASKS_FILE, "w")
-    for task in tasks:
-        file.write(task + "\n")
-    file.close()
+    with open(TASKS_FILE, "w") as file:
+        for task in tasks:
+            file.write(task + "\n")
 
 
 def display_menu():

@@ -46,7 +46,7 @@ def test_create_task_dict():
     task = create_task_dict("Buy milk")
     
     assert task["description"] == "Buy milk"
-    assert task["completed"] == False
+    assert not task["completed"]
 
 
 def test_create_task_dict_strips_whitespace():
@@ -64,7 +64,7 @@ def test_add_task_valid():
     tasks = []
     result = add_task(tasks, "Buy milk")
     
-    assert result == True
+    assert result
     assert len(tasks) == 1
     assert tasks[0]["description"] == "Buy milk"
 
@@ -74,7 +74,7 @@ def test_add_task_invalid():
     tasks = []
     result = add_task(tasks, "")
     
-    assert result == False
+    assert not result
     assert len(tasks) == 0
 
 
@@ -112,15 +112,15 @@ def test_get_task_by_index_invalid():
     """Тест получения задачи по невалидному индексу."""
     tasks = [{"description": "Task 1", "completed": False}]
     
-    assert get_task_by_index(tasks, 0) == None
-    assert get_task_by_index(tasks, 2) == None
-    assert get_task_by_index(tasks, -1) == None
+    assert get_task_by_index(tasks, 0) is None
+    assert get_task_by_index(tasks, 2) is None
+    assert get_task_by_index(tasks, -1) is None
 
 
 def test_get_task_by_index_empty_list():
     """Тест получения из пустого списка задач."""
     tasks = []
-    assert get_task_by_index(tasks, 1) == None
+    assert get_task_by_index(tasks, 1) is None
 
 
 # ============================================================
@@ -136,9 +136,9 @@ def test_complete_task_valid():
     
     result = complete_task(tasks, 1)
     
-    assert result == True
-    assert tasks[0]["completed"] == True
-    assert tasks[1]["completed"] == False
+    assert result
+    assert tasks[0]["completed"]
+    assert not tasks[1]["completed"]
 
 
 def test_complete_task_invalid():
@@ -146,8 +146,8 @@ def test_complete_task_invalid():
     tasks = [{"description": "Task 1", "completed": False}]
     
     result = complete_task(tasks, 2)
-    assert result == False
-    assert tasks[0]["completed"] == False
+    assert not result
+    assert not tasks[0]["completed"]
 
 
 # ============================================================
@@ -164,7 +164,7 @@ def test_delete_task_valid():
     
     result = delete_task(tasks, 2)
     
-    assert result == True
+    assert result
     assert len(tasks) == 2
     assert tasks[0]["description"] == "Task 1"
     assert tasks[1]["description"] == "Task 3"
@@ -175,7 +175,7 @@ def test_delete_task_invalid():
     tasks = [{"description": "Task 1", "completed": False}]
     
     result = delete_task(tasks, 2)
-    assert result == False
+    assert not result
     assert len(tasks) == 1
 
 

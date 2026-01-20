@@ -46,7 +46,9 @@ def read_file_safely(filename):
     Возвращает:
         str: Содержимое файла, или None при ошибке
     """
-    # Ваш код здесь
+    # TODO: Реализуйте эту функцию
+    # Используйте try/except с FileNotFoundError
+    # Верните содержимое файла при успехе, или None при ошибке
     pass
 
 
@@ -61,7 +63,9 @@ def write_file_safely(filename, content):
     Возвращает:
         bool: True при успехе, False в противном случае
     """
-    # Ваш код здесь
+    # TODO: Реализуйте эту функцию
+    # Используйте try/except с Exception
+    # Верните True при успехе, или False при ошибке
     pass
 
 
