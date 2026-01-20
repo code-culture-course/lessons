@@ -30,6 +30,7 @@ Topics covered include:
 - Python basics and syntax
 - Modules and packages
 - Testing and test-driven development
+- Input/Output: console interaction and file operations
 - Data formats (JSON, CSV, YAML)
 - Command-line interface (CLI) projects
 - Git workflow and version control
